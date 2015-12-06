@@ -1,6 +1,5 @@
 var day1Solution = (function(input) {
   var splitInput = input.split('');
-  var size = splitInput.length;
 
   function move(index) {
     var direction = 0;
@@ -17,7 +16,7 @@ var day1Solution = (function(input) {
     part1: function() {
       var floor = 0;
 
-      for(var i = 0; i < size; i++) {
+      for(var i = 0; i < splitInput.length; i++) {
         floor += move(i);
       }
 
@@ -26,14 +25,14 @@ var day1Solution = (function(input) {
     part2: function() {
       var floor = 0;
 
-      for(var i = 0; i < size; i++) {
-        floor += move(i);
+      for(var i = 0; i < splitInput.length; i++) {
         if(floor == -1) {
           break;
         }
+        floor += move(i);
       }
 
-      return i + 1;
+      return i;
     }
   };
 })(inputString());

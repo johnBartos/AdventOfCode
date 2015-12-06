@@ -6,7 +6,7 @@ var day3Solution = (function(input) {
       x: 0,
       y: 0,
       serialize: function() {
-        return  this.x + ',' + this.y;
+        return this.x + ',' + this.y;
       }
     };
 

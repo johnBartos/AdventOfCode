@@ -12,7 +12,7 @@ var day4solution = (function(input) {
     solve: function(match) {
       var start = 0;
       while(1) {
-        var key = input + start.toString();
+        var key = input + start;
         if(isASolution(key, match)) {
           return start;
         }
